@@ -13,7 +13,7 @@ class AuthView extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                color:Color.fromARGB(255, 232, 227, 183),
+                color: Color.fromRGBO(2, 1, 44, 1),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(32.0),
@@ -21,19 +21,20 @@ class AuthView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Cesk.AI',
+                    Text(
+                      'Cesk.AI',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 189, 79, 23),
+                        color: Color.fromRGBO(198, 150, 248, 1),
                       ),
                     ),
-                    Text('Brainstorm',
+                    Text(
+                      'Brainstorm',
                       style: TextStyle(
-                        fontSize: 64,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 189, 79, 23),
-                      ),
+                          fontSize: 64,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(198, 150, 248, 1)),
                     ),
                     SizedBox.shrink(),
                   ],
@@ -45,49 +46,83 @@ class AuthView extends StatelessWidget {
             child: Center(
               child: SizedBox(
                 width: 480,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                SizedBox(),
-                Column(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(),
                     Column(
                       children: [
-                        Text('Get Started'),
-                        Container(
-                          width: double.infinity,
-                          height: 48,
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(
-                            child: Text('Log in'),
-                          ),
-                        ),
-                      
+                        SizedBox(),
+                        Column(
+                          children: [
+                            Text('Get Started'),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 48,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(77, 75, 245, 1),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        'Log in',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(255, 255, 255, 1),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 48,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(77, 75, 245, 1),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        'Log in',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(255, 255, 255, 1),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
                       ],
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text('Qualcosa'),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    ),
+                    Column(
                       children: [
                         Text('Qualcosa'),
-                        Container(),
-                        Text('Qualcosa'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Qualcosa'),
+                            Container(),
+                            Text('Qualcosa'),
+                          ],
+                        ),
                       ],
                     ),
                   ],
                 ),
-              ],
               ),
-                      ),
             ),
           ),
         ],
