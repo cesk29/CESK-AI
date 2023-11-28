@@ -16,34 +16,41 @@ class AuthView extends StatelessWidget {
                 color: Color.fromRGBO(2, 1, 44, 1),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(32.0),
+                padding: const EdgeInsets.all(36.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cesk.AI',
+                      'Cesk-AI',
                       style: TextStyle(
                         fontSize: 24,
-                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Nimbus',
+                        fontWeight: FontWeight.w600,
                         color: Color.fromRGBO(198, 150, 248, 1),
                       ),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Plan a trip',
                           style: TextStyle(
-                              fontSize: 48,
+                              fontSize: 40,
+                              fontFamily: 'Nimbus',
                               fontWeight: FontWeight.bold,
                               color: Color.fromRGBO(198, 150, 248, 1)),
+                        ),
+                        SizedBox(
+                          height: 0,
                         ),
                         Text(
                           'to see the northern lights in Norwey',
                           style: TextStyle(
                               fontSize: 32,
-                              fontWeight: FontWeight.normal,
+                              fontFamily: 'Nimbus',
+                              fontWeight: FontWeight.w300,
                               color: Color.fromRGBO(198, 150, 248, 1)),
                         ),
                       ],
@@ -72,6 +79,7 @@ class AuthView extends StatelessWidget {
                               'Get Started',
                               style: TextStyle(
                                 color: Color.fromRGBO(0, 0, 0, 1),
+                                fontFamily: 'Nimbus',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 32,
                               ),
@@ -96,7 +104,8 @@ class AuthView extends StatelessWidget {
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(255, 255, 255, 1),
-                                          fontWeight: FontWeight.w600,
+                                          fontFamily: 'Nimbus',
+                                          fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
                                       ),
@@ -120,7 +129,8 @@ class AuthView extends StatelessWidget {
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(255, 255, 255, 1),
-                                          fontWeight: FontWeight.w600,
+                                          fontFamily: 'Nimbus',
+                                          fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
                                       ),
@@ -135,14 +145,48 @@ class AuthView extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text('Qualcosa'),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Qualcosa'),
-                            Container(),
-                            Text('Qualcosa'),
-                          ],
+                        Text(
+                          'OpenAI',
+                          style: TextStyle(
+                            fontFamily: 'Nimbus',
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SizedBox(
+                          width: 230,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                'Terms of use',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                              Container(
+                                width: 1,
+                                height: 8,
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(0, 0, 0, 1),
+                                ),
+                                child: Text('I'),
+                              ),
+                              Text(
+                                'Privacy policy',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 24,
                         ),
                       ],
                     ),
