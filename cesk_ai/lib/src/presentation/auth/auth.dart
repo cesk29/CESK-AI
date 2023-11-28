@@ -29,12 +29,24 @@ class AuthView extends StatelessWidget {
                         color: Color.fromRGBO(198, 150, 248, 1),
                       ),
                     ),
-                    Text(
-                      'Brainstorm',
-                      style: TextStyle(
-                          fontSize: 64,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(198, 150, 248, 1)),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Plan a trip',
+                          style: TextStyle(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(198, 150, 248, 1)),
+                        ),
+                        Text(
+                          'to see the northern lights in Norwey',
+                          style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.normal,
+                              color: Color.fromRGBO(198, 150, 248, 1)),
+                        ),
+                      ],
                     ),
                     SizedBox.shrink(),
                   ],
@@ -56,7 +68,17 @@ class AuthView extends StatelessWidget {
                         SizedBox(),
                         Column(
                           children: [
-                            Text('Get Started'),
+                            Text(
+                              'Get Started',
+                              style: TextStyle(
+                                color: Color.fromRGBO(0, 0, 0, 1),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 32,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -74,6 +96,8 @@ class AuthView extends StatelessWidget {
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(255, 255, 255, 1),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 16,
                                         ),
                                       ),
                                     ),
@@ -92,10 +116,12 @@ class AuthView extends StatelessWidget {
                                     ),
                                     child: Center(
                                       child: Text(
-                                        'Log in',
+                                        'Sign up',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(255, 255, 255, 1),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 16,
                                         ),
                                       ),
                                     ),
