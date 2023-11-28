@@ -35,7 +35,7 @@ class AuthView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Plan a trip',
+                          'Help me debug',
                           style: TextStyle(
                               fontSize: 40,
                               fontFamily: 'Nimbus',
@@ -46,11 +46,9 @@ class AuthView extends StatelessWidget {
                           height: 0,
                         ),
                         Text(
-                          'to see the northern lights in Norwey',
+                          'a Python script automating daily reports',
                           style: TextStyle(
                               fontSize: 32,
-                              fontFamily: 'Nimbus',
-                              fontWeight: FontWeight.w300,
                               color: Color.fromRGBO(198, 150, 248, 1)),
                         ),
                       ],
