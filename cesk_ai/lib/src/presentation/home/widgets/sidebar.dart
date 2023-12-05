@@ -11,6 +11,16 @@ class Sidebar extends StatelessWidget {
         Row(
           children: [
             Container(),
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.network(
+                  'https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png',
+                  width: 20,
+                ),
+              ),
+            ),
             const Text('ChatGPT'),
             const Spacer(),
             const Icon(Icons.add),

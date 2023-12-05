@@ -1,4 +1,4 @@
-import 'package:cesk_ai/src/presentation/auth/auth.dart';
+import 'package:cesk_ai/src/presentation/home/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AuthView(),
+      home: const HomeView(),
     );
   }
 }
