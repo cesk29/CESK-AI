@@ -1,3 +1,4 @@
+import 'package:cesk_ai/src/presentation/home/widgets/main_section.dart';
 import 'package:cesk_ai/src/presentation/home/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class HomeView extends StatelessWidget {
       body: Row(children: [
         //Sidebar
         Sidebar(),
+        MainSection(),
         //chat section
       ]),
     );

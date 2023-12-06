@@ -18,7 +18,7 @@ class Sidebar extends StatelessWidget {
               children: [
                 Container(),
                 const Padding(
-                  padding: EdgeInsets.only(right: 8),
+                  padding: EdgeInsets.all(8),
                   child: CircleAvatar(
                     radius: 14.0,
                     backgroundImage: NetworkImage(
