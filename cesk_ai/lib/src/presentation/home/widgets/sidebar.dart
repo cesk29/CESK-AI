@@ -17,20 +17,19 @@ class Sidebar extends StatelessWidget {
             child: Row(
               children: [
                 Container(),
-                Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.network(
-                      'https://static.vecteezy.com/system/resources/previews/019/493/370/original/chatgpt-logo-openai-logo-ai-chatbot-chatgpt-copy-space-text-editorial-illustration-free-vector.jpg',
-                      width: 30,
-                    ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 8),
+                  child: CircleAvatar(
+                    radius: 14.0,
+                    backgroundImage: NetworkImage(
+                        'https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png'),
+                    backgroundColor: Color.fromRGBO(255, 255, 255, 1),
                   ),
                 ),
                 const Text(
                   'ChatGPT',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     fontFamily: 'Nimbus',
                     fontWeight: FontWeight.w200,
                     color: Color.fromRGBO(255, 255, 255, 1),
