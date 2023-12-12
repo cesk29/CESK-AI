@@ -1,5 +1,4 @@
 import 'package:cesk_ai/src/presentation/home/widgets/hoverable_button.dart';
-import 'package:cesk_ai/src/presentation/home/widgets/suggestion_button.dart';
 import 'package:flutter/cupertino.dart';
 
 class MainSection extends StatelessWidget {
@@ -43,7 +42,7 @@ class MainSection extends StatelessWidget {
           ),
           const Row(
             children: [
-              SuggestionButton(),
+              Text('data'),
               Text('ciao'),
             ],
           ),
