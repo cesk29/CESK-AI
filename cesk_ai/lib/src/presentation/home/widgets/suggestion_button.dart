@@ -22,8 +22,8 @@ class _SuggestionButtonState extends State<SuggestionButton> {
           const Expanded(
             child: Column(
               children: [
-                Text('widget.title'),
-                Text('data'),
+                Text('Poesia'),
+                Text('Si ni mondo esistesse un po di bene'),
               ],
             ),
           ),
