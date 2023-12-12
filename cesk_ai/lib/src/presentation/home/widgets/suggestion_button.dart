@@ -13,21 +13,25 @@ class _SuggestionButtonState extends State<SuggestionButton> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
+      decoration: BoxDecoration(
+          border:
+              Border.all(width: 1, color: const Color.fromRGBO(0, 0, 0, 1))),
       duration: const Duration(milliseconds: 400),
       child: Row(
         children: [
-          Expanded(
-            child: Column(children: [
-              Text(widget.title),
-              const Text('data'),
-            ]),
+          const Expanded(
+            child: Column(
+              children: [
+                Text('widget.title'),
+                Text('data'),
+              ],
+            ),
           ),
-          isHovered
-              ? Container(
-                  alignment: Alignment.center,
-                  child: const Icon(CupertinoIcons.arrow_up),
-                )
-              : const SizedBox(),
+          Container(
+            alignment: Alignment.center,
+            child: const Icon(CupertinoIcons.arrow_up),
+          ),
+          const SizedBox(),
         ],
       ),
     );

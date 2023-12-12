@@ -8,25 +8,42 @@ class MainSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const HoverableButton(),
+          Container(
+              alignment: Alignment.topLeft, child: const HoverableButton()),
           Column(
             children: [
               Container(
-                width: 72,
-                height: 72,
+                width: 80,
+                height: 80,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     border: Border.all(color: const Color(0xfff1f1f1))),
                 child: Center(
                   child: Image.asset(
                     'assets/open_ai_logo.png',
-                    width: 48,
-                    height: 48,
+                    width: 56,
+                    height: 56,
                   ),
                 ),
               ),
-              const Text('How i can help you today?')
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                'How i can help you today?',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Nimbus'),
+              ),
+            ],
+          ),
+          const Row(
+            children: [
+              Text('data'),
+              Text('data'),
             ],
           ),
         ],
