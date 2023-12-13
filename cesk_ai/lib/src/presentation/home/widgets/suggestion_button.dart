@@ -1,37 +1,56 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class SuggestionButton extends StatefulWidget {
-  const SuggestionButton({super.key, required this.title});
-
-  final String title;
+class MyContainer extends StatefulWidget {
+  const MyContainer({super.key});
 
   @override
-  State<SuggestionButton> createState() => _SuggestionButtonState();
+  _MyContainerState createState() => _MyContainerState();
 }
 
-class _SuggestionButtonState extends State<SuggestionButton> {
+class _MyContainerState extends State<MyContainer> {
+  bool isHovered = false;
+
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      decoration: BoxDecoration(
-          border:
-              Border.all(width: 1, color: const Color.fromRGBO(0, 0, 0, 1))),
-      duration: const Duration(milliseconds: 400),
+    return Container(
+      color: Colors.grey[300],
       child: Row(
         children: [
-          const Expanded(
-            child: Column(
-              children: [
-                Text('Poesia'),
-                Text('Si ni mondo esistesse un po di bene'),
-              ],
+          Expanded(
+            child: Container(
+              color: Colors.blue,
+              child: const Center(
+                child: Text(
+                  'Expanded Content',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            child: const Icon(CupertinoIcons.arrow_up),
+          MouseRegion(
+            onEnter: (_) {
+              setState(() {
+                isHovered = true;
+              });
+            },
+            onExit: (_) {
+              setState(() {
+                isHovered = false;
+              });
+            },
+            child: Visibility(
+              visible: isHovered,
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.red,
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ),
-          const SizedBox(),
         ],
       ),
     );

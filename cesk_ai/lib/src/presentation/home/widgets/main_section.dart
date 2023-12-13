@@ -41,10 +41,7 @@ class MainSection extends StatelessWidget {
             ],
           ),
           const Row(
-            children: [
-              Text('data'),
-              Text('ciao'),
-            ],
+            children: [Text('data'), Text('data')],
           ),
         ],
       ),
