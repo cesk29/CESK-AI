@@ -7,13 +7,23 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Row(children: [
-        //Sidebar
-        Sidebar(),
-        MainSection(),
-        //chat section
-      ]),
+    return Scaffold(
+      drawer: SizedBox(
+          width: MediaQuery.sizeOf(context).width * 0.7,
+          child: const Sidebar()),
+      body: LayoutBuilder(builder: (context, constraints) {
+        final isMobile = constraints.maxWidth <= 600;
+        return Row(children: [
+          //Sidebar
+          if (!isMobile)
+            const SizedBox(
+              width: 300,
+              child: Sidebar(),
+            ),
+          //chat section
+          const MainSection(),
+        ]);
+      }),
     );
   }
 }

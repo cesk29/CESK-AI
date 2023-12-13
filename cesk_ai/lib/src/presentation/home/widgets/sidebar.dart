@@ -16,14 +16,21 @@ class Sidebar extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Container(),
-                const Padding(
-                  padding: EdgeInsets.all(8),
-                  child: CircleAvatar(
-                    radius: 14.0,
-                    backgroundImage: NetworkImage(
-                        'https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png'),
-                    backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(color: const Color(0xfff1f1f1))),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/open_ai_logo.png',
+                        width: 56,
+                        height: 56,
+                      ),
+                    ),
                   ),
                 ),
                 const Text(
