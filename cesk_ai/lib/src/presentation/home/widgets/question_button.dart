@@ -15,7 +15,7 @@ class QuestionButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 border: Border.all(color: const Color(0xfff1f1f1)),
               ),
-              child: const Text('?'),
+              child: const Center(child: Text('?')),
             ))
       ],
     );

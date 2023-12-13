@@ -1,56 +1,37 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class MyContainer extends StatefulWidget {
-  const MyContainer({super.key});
+class SuggestionButton extends StatefulWidget {
+  const SuggestionButton({super.key, required this.title});
+
+  final String title;
 
   @override
-  _MyContainerState createState() => _MyContainerState();
+  State<SuggestionButton> createState() => _SuggestionButtonState();
 }
 
-class _MyContainerState extends State<MyContainer> {
-  bool isHovered = false;
-
+class _SuggestionButtonState extends State<SuggestionButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey[300],
+    return AnimatedContainer(
+      decoration: BoxDecoration(
+          border:
+              Border.all(width: 1, color: const Color.fromRGBO(0, 0, 0, 1))),
+      duration: const Duration(milliseconds: 400),
       child: Row(
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.blue,
-              child: const Center(
-                child: Text(
-                  'Expanded Content',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+          const Expanded(
+            child: Column(
+              children: [
+                Text('Poesia'),
+                Text('Si ni mondo esistesse un po di bene'),
+              ],
             ),
           ),
-          MouseRegion(
-            onEnter: (_) {
-              setState(() {
-                isHovered = true;
-              });
-            },
-            onExit: (_) {
-              setState(() {
-                isHovered = false;
-              });
-            },
-            child: Visibility(
-              visible: isHovered,
-              child: Container(
-                width: 50,
-                height: 50,
-                color: Colors.red,
-                child: const Icon(
-                  Icons.add,
-                  color: Colors.white,
-                ),
-              ),
-            ),
+          Container(
+            alignment: Alignment.center,
+            child: const Icon(CupertinoIcons.arrow_up),
           ),
+          const SizedBox(),
         ],
       ),
     );
