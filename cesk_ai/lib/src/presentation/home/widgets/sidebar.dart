@@ -6,7 +6,6 @@ class Sidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
       child: Container(
         decoration: const BoxDecoration(
           color: Color.fromRGBO(0, 0, 0, 1),
