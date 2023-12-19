@@ -1,4 +1,5 @@
 import 'package:cesk_ai/src/presentation/home/widgets/hoverable_button.dart';
+import 'package:cesk_ai/src/presentation/home/widgets/suggestion_button.dart';
 import 'package:flutter/material.dart';
 
 class MainSection extends StatelessWidget {
@@ -55,8 +56,34 @@ class MainSection extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Row(
-                      children: [],
+                    const Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SuggestionButton(
+                                title: 'Design a database schema',
+                                description: 'for a online merch store'),
+                            SuggestionButton(
+                                title: 'Design a database schema',
+                                description: 'for a online merch store'),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SuggestionButton(
+                                title: 'Design a database schema',
+                                description: 'for a online merch store'),
+                            SuggestionButton(
+                                title: 'Design a database schema',
+                                description: 'for a online merch store'),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        )
+                      ],
                     ),
                   ],
                 ),

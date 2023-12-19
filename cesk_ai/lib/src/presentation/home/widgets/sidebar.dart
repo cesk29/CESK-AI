@@ -46,6 +46,7 @@ class Sidebar extends StatelessWidget {
                   Icons.add,
                   color: Color.fromRGBO(255, 255, 255, 1),
                 ),
+                const CloseButton(),
               ],
             ),
           ),
