@@ -46,7 +46,14 @@ class Sidebar extends StatelessWidget {
                   Icons.add,
                   color: Color.fromRGBO(255, 255, 255, 1),
                 ),
-                const CloseButton(),
+                if (MediaQuery.sizeOf(context).width <= 600)
+                  GestureDetector(
+                      onTap: () {
+                        if (!Scaffold.of(context).isDrawerOpen) {
+                          Scaffold.of(context).openDrawer();
+                        }
+                      },
+                      child: const CloseButton()),
               ],
             ),
           ),

@@ -21,16 +21,13 @@ class _SuggestionButtonState extends State<SuggestionButton> {
 
   @override
   Widget build(BuildContext context) {
-    // Stile del pulsante personalizzato
-    final buttonStyle = ElevatedButton.styleFrom(
-      foregroundColor: Colors.white,
+    final buttonStyle = TextButton.styleFrom(
       backgroundColor: isHovered
-          ? Colors.blueGrey[800]
-          : Colors.blueGrey[900], // Colore del testo
-      padding: const EdgeInsets.symmetric(
-          horizontal: 32.0, vertical: 20.0), // Padding
+          ? const Color.fromARGB(255, 241, 241, 241)
+          : const Color.fromARGB(0, 16, 184, 156),
+      padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20.0),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0), // Bordi arrotondati
+        borderRadius: BorderRadius.circular(15.0),
       ),
     );
 
@@ -47,17 +44,7 @@ class _SuggestionButtonState extends State<SuggestionButton> {
           duration: const Duration(milliseconds: 400),
           width: 344,
           height: 70,
-          decoration: BoxDecoration(
-            gradient: isHovered
-                ? LinearGradient(colors: [
-                    Colors.blueGrey[700]!,
-                    const Color.fromARGB(255, 116, 159, 180)
-                  ])
-                : LinearGradient(
-                    colors: [Colors.blueGrey[800]!, Colors.blueGrey[900]!]),
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          child: ElevatedButton(
+          child: TextButton(
             style: buttonStyle,
             onPressed: () {},
             child: Row(
@@ -71,13 +58,13 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                       Text(
                         widget.title,
                         style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromRGBO(152, 152, 152, 1)),
                       ),
                       Text(
                         widget.description,
                         style: const TextStyle(
-                          color: Color.fromARGB(255, 200, 200, 200),
+                          color: Color.fromARGB(255, 205, 205, 205),
                         ),
                       ),
                     ],
@@ -87,15 +74,15 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                 if (isHovered)
                   Container(
                     width:
-                        24, // Width and height are equal to make the container square
-                    height: 24, // Square shape
+                        30, // Width and height are equal to make the container square
+                    height: 30, // Square shape
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(
-                          255, 43, 43, 43), // Container color
+                          255, 255, 255, 255), // Container color
                       borderRadius: BorderRadius.circular(8), // Border radius
                     ),
                     child: const Icon(CupertinoIcons.arrow_up,
-                        color: Colors.white, size: 12),
+                        color: Color.fromARGB(255, 160, 160, 160), size: 16),
                   )
                 else
                   const SizedBox(
