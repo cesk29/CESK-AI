@@ -59,7 +59,7 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                         widget.title,
                         style: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(101, 101, 101, 1)),
+                            color: Color.fromRGBO(78, 78, 78, 1)),
                       ),
                       Text(
                         widget.description,
@@ -70,12 +70,10 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                     ],
                   ),
                 ),
-                // Icona che appare quando il pulsante è in stato hover
                 if (isHovered)
                   Container(
-                    width:
-                        30, // Width and height are equal to make the container square
-                    height: 30, // Square shape
+                    width: 30,
+                    height: 30,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(
                           255, 255, 255, 255), // Container color
@@ -85,9 +83,7 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                         color: Color.fromARGB(255, 160, 160, 160), size: 16),
                   )
                 else
-                  const SizedBox(
-                      width:
-                          48), // Mantiene la spaziatura anche quando l'icona non è visibile
+                  const SizedBox(width: 48),
               ],
             ),
           ),

@@ -50,7 +50,7 @@ class MainSection extends StatelessWidget {
                         const Text(
                           'How i can help you today?',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nimbus'),
                         ),
