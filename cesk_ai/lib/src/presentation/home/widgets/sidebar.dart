@@ -21,13 +21,14 @@ class Sidebar extends StatelessWidget {
                     width: 30,
                     height: 30,
                     decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255),
                         borderRadius: BorderRadius.circular(100),
                         border: Border.all(color: const Color(0xfff1f1f1))),
                     child: Center(
                       child: Image.asset(
                         'assets/open_ai_logo.png',
-                        width: 56,
-                        height: 56,
+                        width: 22,
+                        height: 22,
                       ),
                     ),
                   ),

@@ -65,19 +65,20 @@ class MainSection extends StatelessWidget {
                                 title: 'Design a database schema',
                                 description: 'for a online merch store'),
                             SuggestionButton(
-                                title: 'Design a database schema',
-                                description: 'for a online merch store'),
+                                title: 'Come up with concepts',
+                                description: 'for a retro-style arcade game'),
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SuggestionButton(
-                                title: 'Design a database schema',
-                                description: 'for a online merch store'),
+                                title: 'Explains options trading',
+                                description:
+                                    'if im familiar with buying stocks'),
                             SuggestionButton(
-                                title: 'Design a database schema',
-                                description: 'for a online merch store'),
+                                title: 'Compare design',
+                                description: 'for mobile apps'),
                           ],
                         ),
                         SizedBox(
