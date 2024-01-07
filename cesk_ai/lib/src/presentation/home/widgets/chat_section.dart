@@ -8,6 +8,7 @@ class ChatSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final messages = [
+      //lista di dizionari
       {
         'type': 'user',
         'message': 'ciao',
