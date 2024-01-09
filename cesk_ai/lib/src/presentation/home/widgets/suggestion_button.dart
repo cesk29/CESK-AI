@@ -23,8 +23,8 @@ class _SuggestionButtonState extends State<SuggestionButton> {
   Widget build(BuildContext context) {
     final buttonStyle = TextButton.styleFrom(
       backgroundColor: isHovered
-          ? const Color.fromARGB(255, 241, 241, 241)
-          : const Color.fromARGB(255, 232, 239, 255),
+          ? const Color.fromARGB(255, 219, 219, 219)
+          : const Color.fromARGB(255, 219, 219, 219),
       padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
