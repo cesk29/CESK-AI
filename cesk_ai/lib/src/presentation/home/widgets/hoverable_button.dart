@@ -41,7 +41,7 @@ class _HoverableButtonState extends State<HoverableButton> {
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('ChatGPT'),
+              Text('CESK2.0'),
               Icon(
                 CupertinoIcons.chevron_down,
                 size: 12,

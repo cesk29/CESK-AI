@@ -29,28 +29,24 @@ class MainSection extends StatelessWidget {
                         child: const HoverableButton()),
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           width: 80,
                           height: 80,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              border:
-                                  Border.all(color: const Color(0xfff1f1f1))),
                           child: Center(
                             child: Image.asset(
-                              'assets/open_ai_logo.png',
-                              width: 56,
-                              height: 56,
+                              'assets/Asset1img_pic.png',
+                              width: 80,
+                              height: 80,
                             ),
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 24,
                         ),
                         const Text(
                           'How i can help you today?',
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nimbus'),
                         ),
@@ -62,11 +58,11 @@ class MainSection extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SuggestionButton(
-                                title: 'Design a database schema',
-                                description: 'for a online merch store'),
-                            SuggestionButton(
                                 title: 'Come up with concepts',
                                 description: 'for a retro-style arcade game'),
+                            SuggestionButton(
+                                title: 'Compare design',
+                                description: 'for mobile app'),
                           ],
                         ),
                         Row(
@@ -77,8 +73,8 @@ class MainSection extends StatelessWidget {
                                 description:
                                     'if im familiar with buying stocks'),
                             SuggestionButton(
-                                title: 'Compare design',
-                                description: 'for mobile apps'),
+                                title: 'Design a database schema',
+                                description: 'for a online merch store'),
                           ],
                         ),
                         SizedBox(

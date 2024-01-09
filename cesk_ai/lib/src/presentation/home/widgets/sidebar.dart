@@ -8,7 +8,7 @@ class Sidebar extends StatelessWidget {
     return SizedBox(
       child: Container(
         decoration: const BoxDecoration(
-          color: Color.fromRGBO(0, 0, 0, 1),
+          color: Color.fromARGB(255, 0, 0, 0),
         ),
         child: Column(children: [
           Padding(
@@ -17,29 +17,22 @@ class Sidebar extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 8),
-                  child: Container(
+                  child: Image.asset(
+                    'assets/Asset1img_pic.png',
                     width: 30,
                     height: 30,
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(100),
-                        border: Border.all(color: const Color(0xfff1f1f1))),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/open_ai_logo.png',
-                        width: 22,
-                        height: 22,
-                      ),
-                    ),
                   ),
                 ),
-                const Text(
-                  'ChatGPT',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'Nimbus',
-                    fontWeight: FontWeight.w200,
-                    color: Color.fromRGBO(255, 255, 255, 1),
+                const Padding(
+                  padding: EdgeInsets.only(top: 6),
+                  child: Text(
+                    'Last Chats',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Nimbus',
+                      fontWeight: FontWeight.w200,
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                    ),
                   ),
                 ),
                 const Spacer(),

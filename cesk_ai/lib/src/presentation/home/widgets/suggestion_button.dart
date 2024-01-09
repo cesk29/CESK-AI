@@ -23,8 +23,8 @@ class _SuggestionButtonState extends State<SuggestionButton> {
   Widget build(BuildContext context) {
     final buttonStyle = TextButton.styleFrom(
       backgroundColor: isHovered
-          ? const Color.fromARGB(255, 219, 219, 219)
-          : const Color.fromARGB(255, 219, 219, 219),
+          ? const Color.fromARGB(162, 121, 255, 226)
+          : const Color.fromARGB(255, 241, 241, 241),
       padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
@@ -58,13 +58,18 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                       Text(
                         widget.title,
                         style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(78, 78, 78, 1)),
+                            fontFamily: 'Nimbus',
+                            fontWeight: FontWeight.w500,
+                            fontSize: 13,
+                            color: Color.fromRGBO(0, 0, 0, 1)),
                       ),
                       Text(
                         widget.description,
                         style: const TextStyle(
-                          color: Color.fromRGBO(152, 152, 152, 1),
+                          fontFamily: 'Nimbus',
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(164, 164, 164, 1),
                         ),
                       ),
                     ],
@@ -80,7 +85,7 @@ class _SuggestionButtonState extends State<SuggestionButton> {
                       borderRadius: BorderRadius.circular(8), // Border radius
                     ),
                     child: const Icon(CupertinoIcons.arrow_up,
-                        color: Color.fromARGB(255, 160, 160, 160), size: 16),
+                        color: Color.fromARGB(255, 0, 0, 0), size: 16),
                   )
                 else
                   const SizedBox(width: 48),
