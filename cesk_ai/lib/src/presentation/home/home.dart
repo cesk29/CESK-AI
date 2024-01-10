@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
               child: Sidebar(),
             ),
           //chat section
-          const ChatSection(),
+          const Expanded(child: ChatSection()),
         ]);
       }),
     );

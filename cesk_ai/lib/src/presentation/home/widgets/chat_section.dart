@@ -57,17 +57,67 @@ class ChatSection extends StatelessWidget {
 
 */
 
-import 'package:cesk_ai/src/presentation/home/widgets/hoverable_button.dart';
+import 'package:cesk_ai/src/data/models/message.dart';
+import 'package:cesk_ai/src/presentation/home/blocs/chat_cubit.dart';
 import 'package:cesk_ai/src/presentation/home/widgets/messages/message_ai.dart';
 import 'package:cesk_ai/src/presentation/home/widgets/messages/message_user.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ChatSection extends StatelessWidget {
   const ChatSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => ChatCubit()..loadMessages(),
+      child: const _ChatSection(),
+    );
+  }
+}
+
+class _ChatSection extends StatelessWidget {
+  const _ChatSection();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<ChatCubit, ChatState>(builder: (context, state) {
+      if (state is ChatLoading) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      }
+      if (state is ChatError) {
+        return Center(
+          child: Text(state.error),
+        );
+      }
+      if (state is ChatLoaded) {
+        state.messages;
+        return Column(
+          children: [
+            Expanded(
+              child: ListView(
+                children: [
+                  for (final message in state.messages)
+                    message is MessageAI
+                        ? MessageAIWidget(label: message.content)
+                        : MessageUserWidget(label: message.content)
+                ],
+              ),
+            ),
+            GestureDetector(
+              onTap: () => context.read<ChatCubit>().insert('Ciao'),
+              child: const Text('Add'),
+            )
+          ],
+        );
+      }
+      return const SizedBox();
+    });
+  }
+}
+/*
     final messages = [
       {
         'type': 'user',
@@ -78,7 +128,9 @@ class ChatSection extends StatelessWidget {
         'message': 'ciao a te',
       }
     ];
-    return Expanded(
+
+    
+    Expanded(
       child: Stack(
         children: [
           Container(
@@ -131,6 +183,7 @@ class ChatSection extends StatelessWidget {
                     ),
                     Container(
                       height: 50,
+                      width: 600,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(1000),
                         border: Border.all(
@@ -184,4 +237,5 @@ class ChatSection extends StatelessWidget {
       ),
     );
   }
-}
+  */
+  
